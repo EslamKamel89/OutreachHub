@@ -13,7 +13,33 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('company_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->string('name');
+
+            $table->string('job_title')->nullable();
+
+            $table->string('linkedin_url', 500)->nullable();
+
+            $table->string('email')->nullable();
+
+            $table->text('notes')->nullable();
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->index('company_id');
+
+            $table->index('name');
+            $table->index('email');
+
+            $table->index('job_title');
+
+            $table->index('linkedin_url');
         });
     }
 

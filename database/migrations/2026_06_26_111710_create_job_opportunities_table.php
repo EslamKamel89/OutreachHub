@@ -13,7 +13,33 @@ return new class extends Migration
     {
         Schema::create('job_opportunities', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('company_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->string('title');
+
+            $table->string('url', 500)->nullable();
+
+            $table->boolean('remote')->default(false);
+
+            $table->decimal('salary_min', 12, 2)->nullable();
+
+            $table->decimal('salary_max', 12, 2)->nullable();
+
+            $table->string('currency', 10)->nullable();
+
+            $table->text('notes')->nullable();
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->index('company_id');
+
+            $table->index('remote');
+            $table->index('currency');
         });
     }
 

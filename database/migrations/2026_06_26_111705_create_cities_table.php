@@ -13,7 +13,25 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('country_id')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
+
+            $table->string('name', 120);
+
+            $table->boolean('is_priority')->default(false);
+
+            $table->text('notes')->nullable();
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->index('country_id');
+            $table->index('is_priority');
+
+            $table->unique(['country_id', 'name']);
         });
     }
 
