@@ -28441,11 +28441,45 @@ namespace Livewire\Features\SupportTesting {
             }
     }
 
-namespace Filament\Pages {
+namespace App\Filament\Resources\Activities\Pages {
     /**
      */
-    class Dashboard extends \Filament\Pages\Page {
+    class CreateActivity extends \Filament\Resources\Pages\CreateRecord {
             }
+    /**
+     */
+    class EditActivity extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListActivities extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace Filament\Resources\Pages {
+    /**
+     * @template TModel of Model = Model
+     * @property-read Schema $form
+     */
+    class CreateRecord extends \Filament\Resources\Pages\Page {
+            }
+    /**
+     */
+    class Page extends \Filament\Pages\Page {
+            }
+    /**
+     * @template TModel of Model = Model
+     * @property-read Schema $form
+     */
+    class EditRecord extends \Filament\Resources\Pages\Page {
+            }
+    /**
+     */
+    class ListRecords extends \Filament\Resources\Pages\Page {
+            }
+    }
+
+namespace Filament\Pages {
     /**
      * @template TConfiguration of PageConfiguration = PageConfiguration
      */
@@ -28457,7 +28491,146 @@ namespace Filament\Pages {
             }
     /**
      */
+    class Dashboard extends \Filament\Pages\Page {
+            }
+    /**
+     */
     class SimplePage extends \Filament\Pages\BasePage {
+            }
+    }
+
+namespace App\Filament\Resources\Cities\Pages {
+    /**
+     */
+    class CreateCity extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditCity extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListCities extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Companies\Pages {
+    /**
+     */
+    class CreateCompany extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditCompany extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListCompanies extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Contacts\Pages {
+    /**
+     */
+    class CreateContact extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditContact extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListContacts extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Countries\Pages {
+    /**
+     */
+    class CreateCountry extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditCountry extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListCountries extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Industries\Pages {
+    /**
+     */
+    class CreateIndustry extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditIndustry extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListIndustries extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\JobOpportunities\Pages {
+    /**
+     */
+    class CreateJobOpportunity extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditJobOpportunity extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListJobOpportunities extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\OutreachAttempts\Pages {
+    /**
+     */
+    class CreateOutreachAttempt extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditOutreachAttempt extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListOutreachAttempts extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Tags\Pages {
+    /**
+     */
+    class CreateTag extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditTag extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListTags extends \Filament\Resources\Pages\ListRecords {
+            }
+    }
+
+namespace App\Filament\Resources\Tasks\Pages {
+    /**
+     */
+    class CreateTask extends \Filament\Resources\Pages\CreateRecord {
+            }
+    /**
+     */
+    class EditTask extends \Filament\Resources\Pages\EditRecord {
+            }
+    /**
+     */
+    class ListTasks extends \Filament\Resources\Pages\ListRecords {
             }
     }
 
